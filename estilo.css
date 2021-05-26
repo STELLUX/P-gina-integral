@@ -1,0 +1,527 @@
+ :root{
+   --color1:#ffffff ;
+   --color2:rgb(25, 85, 48);
+   --color3:#eb8a0c ;
+   --fondo: #000000;
+   --titulos: 33px;
+   --margenes: 60px;
+   --espacios: 10px;
+   --espacios-contenido: 60px;
+
+   }
+ 
+ *{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+body {
+  font-family: sans-serif;
+  background: var(--fondo);
+}
+img {
+  vertical-align: top;
+}
+
+/* redes sociales */
+.redes{
+  height:200px ;
+  padding: 30px;
+}
+.sociales{
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.sociales li{
+  display: inline-block;
+}
+.sociales a{
+  padding:20px;
+}
+
+
+/* preloader */
+.hidden{
+  overflow: hidden;
+}
+.centrado{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #dbd7d7;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: #cef;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+  .lds-facebook div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+  }
+  .lds-facebook div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+  }
+  .lds-facebook div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+  }
+  @keyframes lds-facebook {
+    0% {
+      top: 8px;
+      height: 64px;
+    }
+    50%, 100% {
+      top: 24px;
+      height: 32px;
+    }
+  }
+
+  /* header */
+  
+  header{
+    width:100% ;
+    height: 600px;
+        background-image: linear-gradient(to bottom,
+    rgba(49, 28, 37, 0.377),
+    rgba(95, 88, 79, 0.425),
+    rgba(49, 41, 25, 0.45)
+    ),url(imagenes/fondo.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+nav{
+  width: 100%;
+  position: fixed;
+  box-shadow: 0 0 10px 0 rgba(255, 250, 250, 0.5)
+}
+.nav1{
+  background: transparent;
+  height: 80px;
+  color: #f2f2f2;
+}
+.nav2{
+  background: var(--fondo);
+  height: 100px;
+  color: #fcfcfc;
+}
+
+.contenedor-nav{
+  display: flex;
+  margin: auto;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  height: inherit;
+  overflow: hidden;
+}
+
+nav .enlaces a{
+  display: inline-block;
+  padding: 5px 0;
+  margin-right: 17px;
+  font-size: 17px;
+  font-weight: 300;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  color: inherit;
+}
+nav .enlaces a:hover{
+  border-bottom: 3px solid #d8811e;
+  transition: 0.6s;
+}
+.logo, .logo img{ height:80px;} 
+
+.icono{
+  display: none;
+  font-size: 24px;
+  padding: 23.5px 20px;
+}
+
+.textos{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #f2f2f2;
+  overflow: hidden;
+  text-align: center;
+}
+
+.textos>h1{font-size: 80px;}
+
+.textos>h2{font-size: 30px; font-weight: 300;}  
+
+
+
+
+/* main */
+
+.contenedor{
+  margin: auto;
+  padding: var(--margenes) 0;
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+  overflow: hidden;
+}
+.contenedor h3{
+  font-size: var(--titulos);
+  color: var(--color1);
+  margin-bottom: var(--espacios);
+}
+.contenedor p{
+  font-size: var(--subtitulos);
+  font-weight: 300;
+  color: var(--color1);
+}
+
+.after::after{
+  content:"";     
+  display: block;
+  margin: auto;
+  margin-top: var(--espacios);
+  width: 100px;
+  height: 2px;
+  background: var(--color1);
+  margin-bottom: var(--espacios-contenido);
+}
+.card{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.content-card{
+  width: 31%;
+  box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  height: 500px;
+}
+
+.people{
+  height: 80%;
+}
+
+.content-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.texto-team{
+  height: 20%;
+  width: 100%;
+  padding: var(--espacios) 0;
+}
+
+.about{
+  background: url(imagenes/fondo-pintura\ 1.jpg);
+  height: auto;
+  background-size: cover;
+}
+.servicios{
+  display: flex;
+  color: #000000;
+  justify-content: space-between;
+  margin: auto;
+  flex-wrap: wrap;
+  height: 80%;
+}
+.text__black{
+  color: #000!important;
+}
+.text__black::after{
+  background: #000;
+}
+.caja-servicios img{
+  margin-bottom: 20px;
+}
+.caja-sevicios>h4{
+  margin-bottom: var(--espacios);
+  height: 40%;
+  color: rgb(255, 254, 254);
+}
+
+.caja-servicios>p{
+  text-align: center;
+  height: 40%;
+  width: 100%;
+}
+.botones-work{
+  overflow: hidden;
+}
+
+.botones-work li{
+  display: inline-block;
+  text-align: center;
+  margin-left: var(--espacios);
+  margin-bottom: var(--espacios-contenido);
+  padding: 6px 12px;
+  border: 1px solid var(--color1);
+  list-style: none;
+  color: var(--color1);
+}
+
+.botones-work li:hover{
+  background: var(--color1);
+  color: #070707;
+  cursor: pointer;
+}
+
+.botones-work .active{
+  background: var(--color1);
+  color: #000000;
+}
+
+.galeria-work{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.galeria-work .cont-work{
+  width: 31%;
+  box-shadow: 0 0 6px 0 rgba(255, 241, 241, 0.466);
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: var(--espacios-contenido);
+}
+
+.img-work{
+  height: 90%;
+  width: 100%;
+}
+
+.img-work img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.textos-work{
+  height: 10%;
+}
+
+.textos-work h4{
+  line-height: 30px;
+  font-weight: 300;
+  color:#ffffff;
+  
+}
+/* footer */
+
+footer{
+  background: url(imagenes/fondo-pintura\ 1.jpg);
+  background-size: cover;
+}
+
+
+#contacto h1{
+  font-size: 2.4rem;
+  margin-bottom: 14px;
+}
+.form{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.input{
+  background: transparent;
+  border: 0;
+  color: #000000;
+  outline: none;
+  border: 3px solid #000000;
+  padding: 20px 10px;
+  /* display: inline-block;
+  padding: 13px;
+  border: none; */
+  color: #000000;
+  /* background:  hsla(0, 0%, 0%, 0.424); */
+  width: 96px;
+}
+
+.input::placeholder{
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+}
+.btn__send{
+  background: rgb(0, 0, 0);
+  color: #fff;
+}
+.marca-logo{
+  width: 50%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.marca-logo img{
+  width: 100%;
+}
+
+.iconos{
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.fab{
+  font-size: 40px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.fas{
+  font-size: 40px;
+  color: #000000;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+footer p{
+  margin-top: 10px;
+  margin: center;
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+}
+input[type="text"],
+input[type="email"]{
+    display: inline-block;
+    width: 49%;
+    margin-bottom: 30px;
+}
+
+.form textarea{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+input[type="submit"]{
+    width: 120px;
+    text-align: center;
+    padding: 14px 0;
+}
+
+input[type="submit"]:hover{
+    cursor: pointer;
+    color: rgb(226, 129, 2);
+    background: #ffffff;
+}
+
+
+.marca-logo{
+  width: 20%;
+  margin: auto;
+  margin-bottom: var(--espacios);
+}
+
+.marca-logo img{
+  width: 100%;
+}
+
+.iconos{
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.fab{
+  font-size: 60px;
+  color: #f2f2f2;
+  margin-bottom: var(--espacios);
+  display: inline-block;
+}
+footer p{
+  margin-top: var(--espacios);
+}
+
+@media screen and (max-width:700px){
+  .nav2{
+    color: #f2f2f2;
+  }
+  .icono{
+    display: block;
+    cursor: pointer;
+  }
+  .enlaces{
+    position: fixed;
+    top: 80px;
+    background: #000000;
+    left: 0;
+    height: 100%;
+    transition: 1s;
+    width: 0;
+    overflow: hidden;
+  }
+
+  .enlaces a{
+    display:block;
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    text-align: center;
+    background: #000000;
+    color: #f2f2f2;
+  }
+  .textos>h1{font-size: 70px;}
+  .textos>h2{font-size: 35px;}
+
+  .content-card{
+    width: 48%;
+    margin-bottom: var(--margenes);
+  }
+}
+
+:root{
+  --margenes: 30px;
+}
+
+@media screen and (max-width:500px){
+  :root{
+    --espacios-contenido: 25px;
+  }
+
+  .content-card{
+    width: 90%;
+  }
+  .caja-servicios{
+    width: 90%;
+    margin-bottom: var(--margenes);
+  }
+
+ .galeria-work .cont-work{
+   width: 85%;
+ }
+
+  .marca-logo{
+    width: 80%;
+  }
+  .iconos{
+    margin: auto;
+  }
+}
+
+
